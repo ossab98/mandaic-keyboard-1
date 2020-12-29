@@ -1,7 +1,6 @@
 @font-face {
   font-family: "lishana";
-  src: url("../font/lishana.woff2") format("woff2"),
-    url("../font/lishana.woff") format("woff");
+  src: url("../font/lishana.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +25,7 @@ h1 {
 }
 
 textarea,
-.mandaic {
+button {
   font-family: "lishana", sans-serif;
 }
 
