@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "lishana";
+  src: url("../font/lishana.woff2") format("woff2"),
+    url("../font/lishana.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 ::before,
 ::after {
@@ -17,6 +25,11 @@ h1 {
   text-transform: capitalize;
 }
 
+textarea,
+.mandaic {
+  font-family: "lishana", sans-serif;
+}
+
 textarea {
   width: 100vw;
   height: 254px;
@@ -26,7 +39,7 @@ textarea {
   border: 2px solid #c5c5c5;
   border-radius: 10px;
   background-color: transparent;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 button {
