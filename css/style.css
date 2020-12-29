@@ -68,7 +68,7 @@ button:focus {
 }
 
 .space {
-  grid-column: span 18;
+  grid-column: span 16;
 }
 
 .leftshift,

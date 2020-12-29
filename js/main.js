@@ -2,6 +2,7 @@ const area = document.querySelector("textarea");
 const keys = document.querySelectorAll(".key");
 const enter = document.querySelector(".enter");
 const deleteKey = document.querySelector(".delete");
+const clear = document.querySelector(".clear");
 const space = document.querySelector(".space");
 
 // Keep the cursor in the textarea when it's out of focus
@@ -30,6 +31,11 @@ deleteKey.addEventListener("click", () => {
   keepCursor();
 });
 
+// Delete all characters on click
+clear.addEventListener("click", () => {
+  area.textContent = "";
+  keepCursor();
+});
 // Add space between words
 space.addEventListener("click", () => {
   area.textContent += " ";
