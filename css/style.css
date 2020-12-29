@@ -1,0 +1,93 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+h1 {
+  margin-top: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+textarea {
+  width: 100vw;
+  height: 254px;
+  transform: scale(0.7);
+  resize: vertical;
+  padding: 1rem;
+  border: 2px solid #c5c5c5;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 3rem;
+}
+
+button {
+  position: relative;
+  grid-column: span 2;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px 2px 4px 2px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  border-color: #999 #777 #666 #777;
+  color: #222;
+}
+
+button:active,
+button.active {
+  transform: translateY(2px) scale(0.98);
+  border-bottom-width: 2px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.base {
+  display: grid;
+  grid-template-columns: repeat(15, 30px auto);
+  grid-template-rows: repeat(5, 60px);
+  grid-gap: 5px;
+  padding: 20px;
+  background-color: #c5c5c5;
+  border-radius: 10px;
+  border-bottom: 3px solid #777;
+  transform: scale(0.7);
+}
+
+.mandaic {
+  font-size: 1.5rem;
+}
+
+.space {
+  grid-column: span 18;
+}
+
+.leftshift,
+.rightshift {
+  grid-column: span 5;
+}
+
+.delete,
+.capslock,
+.enter {
+  grid-column: span 4;
+}
+
+.tab,
+.backslash {
+  grid-column: span 3;
+}
+
+.ctrl,
+.command {
+  grid-column: span 2;
+}
