@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "lishana";
-  src: url("../font/lishana.ttf") format("ttf");
+  font-family: "Noto Sans Mandaic";
+  src: url("../font/notosansmandaic-regular-webfont.woff2") format("woff2"),
+    url("../font/notosansmandaic-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +27,7 @@ h1 {
 
 textarea,
 .mandaic {
-  font-family: "lishana", sans-serif;
+  font-family: "Noto Sans Mandaic", sans-serif;
 }
 
 textarea {
