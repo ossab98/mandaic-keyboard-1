@@ -14,30 +14,30 @@ function keepCursor() {
 // Click to input key
 keys.forEach((key) => {
   key.addEventListener("click", () => {
-    area.textContent += key.textContent;
+    area.value += key.textContent;
     keepCursor();
   });
 });
 
 // Add a new line
 enter.addEventListener("click", () => {
-  area.textContent += "\n";
+  area.value += "\n";
   keepCursor();
 });
 
 // Delete a single character on click
 deleteKey.addEventListener("click", () => {
-  area.textContent = area.textContent.slice(0, -1);
+  area.value = area.value.slice(0, -1);
   keepCursor();
 });
 
 // Delete all characters on click
 clear.addEventListener("click", () => {
-  area.textContent = "";
+  area.value = "";
   keepCursor();
 });
 // Add space between words
 space.addEventListener("click", () => {
-  area.textContent += " ";
+  area.value += " ";
   keepCursor();
 });
