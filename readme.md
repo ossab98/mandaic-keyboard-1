@@ -6,8 +6,8 @@
 
 ## To Do List
 
-- [ ] Add the Mandaic font to the website, so everyone can see it and use it.
+- [x] Add the Mandaic font to the website, so everyone can see it and use it.
+- [x] Test on Windows and possibly Linux to make sure it works properly.
 - [ ] Add more keys when clicking the Shift keys.
 - [ ] Create a different keyboard for mobile websites based on iOS.
-- [ ] Test on Windows and possibly Linux to make sure it works properly.
 - [ ] Add typing functionality to further improve the user experience.
