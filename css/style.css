@@ -25,8 +25,20 @@ h1 {
   text-transform: capitalize;
 }
 
+.base {
+  display: grid;
+  grid-template-columns: repeat(15, 30px auto);
+  grid-template-rows: repeat(5, 60px);
+  grid-gap: 5px;
+  padding: 20px;
+  background-color: #c5c5c5;
+  border-radius: 10px;
+  border-bottom: 3px solid #777;
+  transform: scale(0.7);
+}
+
 textarea,
-.mandaic {
+span:lang(mid) {
   font-family: "Noto Sans Mandaic", sans-serif;
 }
 
@@ -45,7 +57,7 @@ textarea {
 button {
   position: relative;
   grid-column: span 2;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-style: solid;
   border-width: 1px 2px 4px 2px;
   border-radius: 5px;
@@ -54,8 +66,7 @@ button {
   color: #222;
 }
 
-button:active,
-button.active {
+button:active {
   transform: translateY(2px) scale(0.98);
   border-bottom-width: 2px;
 }
@@ -69,20 +80,17 @@ textarea::placeholder {
   opacity: 0.4;
 }
 
-.base {
-  display: grid;
-  grid-template-columns: repeat(15, 30px auto);
-  grid-template-rows: repeat(5, 60px);
-  grid-gap: 5px;
-  padding: 20px;
-  background-color: #c5c5c5;
-  border-radius: 10px;
-  border-bottom: 3px solid #777;
-  transform: scale(0.7);
+span {
+  font-size: 2rem;
+  color: hsl(333, 100%, 33%);
 }
 
-.mandaic {
-  font-size: 1.5rem;
+span:lang(en) {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1rem;
+  color: inherit;
 }
 
 .space {
