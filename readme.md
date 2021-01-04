@@ -9,7 +9,5 @@
 - [x] Add the Mandaic font to the website, so everyone can see it and use it.
 - [x] Test on Windows and possibly Linux to make sure it works properly.
 - [x] Fix bug for the keyboard to work with input event.
-- [ ] Fix bug for new character to replace deleted character.
-- [ ] Add more keys when clicking the Shift keys.
-- [ ] Create a different keyboard for mobile websites based on iOS.
-- [ ] Add typing functionality to further improve the user experience.
+- [x] Add typing functionality to further improve the user experience.
+- [ ] Add more keys when holding the Shift keys.
