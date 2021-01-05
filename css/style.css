@@ -28,7 +28,7 @@ h1 {
 .base {
   display: grid;
   grid-template-columns: repeat(15, 30px auto);
-  grid-template-rows: repeat(5, 60px);
+  grid-template-rows: repeat(4, 60px);
   grid-gap: 5px;
   padding: 20px;
   background-color: #c5c5c5;
@@ -93,10 +93,6 @@ span:lang(en) {
   color: inherit;
 }
 
-.space {
-  grid-column: span 16;
-}
-
 .leftshift,
 .rightshift {
   grid-column: span 5;
@@ -111,9 +107,4 @@ span:lang(en) {
 .tab,
 .backslash {
   grid-column: span 3;
-}
-
-.ctrl,
-.command {
-  grid-column: span 2;
 }
