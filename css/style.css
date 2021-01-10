@@ -1,9 +1,17 @@
 @font-face {
   font-family: "Noto Sans Mandaic";
-  src: url("../font/notosansmandaic-regular-webfont.woff2") format("woff2"),
-    url("../font/notosansmandaic-regular-webfont.woff") format("woff");
+  src: url("../font/mandaic/notosansmandaic-regular-webfont.woff2")
+      format("woff2"),
+    url("../font/mandaic/notosansmandaic-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("../font/arabic/notosansarabic-regular-webfont.woff2")
+      format("woff2"),
+    url("../font/arabic/notosansarabic-regular-webfont.woff") format("woff");
 }
 
 *,
@@ -15,7 +23,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif;
   background-color: #fafafa;
 }
 
@@ -37,7 +45,6 @@ h1 {
   transform: scale(0.7);
 }
 
-textarea,
 span:lang(mid) {
   font-family: "Noto Sans Mandaic", sans-serif;
 }
@@ -52,6 +59,7 @@ textarea {
   border-radius: 10px;
   background-color: transparent;
   font-size: 2.5rem;
+  font-family: "Noto Sans Mandaic", "Noto Sans Arabic", sans-serif;
 }
 
 button {
