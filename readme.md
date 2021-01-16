@@ -1,8 +1,10 @@
 # Mandaic Keyboard
 
-- Just a keyboard for typing in the [Mandaic Language](https://en.wikipedia.org/wiki/Mandaic_script), which is a descendent of Aramaic. It is very similar to the Assyrian and Syriac languages spoken in Iran, Iraq, Syria, and Turkey.
+- A keyboard for typing in the
+  [Mandaic Language](https://en.wikipedia.org/wiki/Mandaic_script), which is a
+  descendent of Aramaic.
 
-- You can only type in Mandaic by clicking with a mouse for the time being.
+- Mandaic is related to Semitic languages such as Assyrian and Syriac.
 
 ## To Do List
 
@@ -10,4 +12,5 @@
 - [x] Test on Windows and possibly Linux to make sure it works properly.
 - [x] Fix bug for the keyboard to work with input event.
 - [x] Add typing functionality to further improve the user experience.
+- [x] Add missing characters such as ? from the Arabic Noto Sans family.
 - [ ] Add more keys when holding the Shift keys.
