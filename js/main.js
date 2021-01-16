@@ -1,206 +1,209 @@
-const area = document.querySelector("textarea");
+const input = document.querySelector("textarea");
 
-area.addEventListener("keydown", (event) => {
-  if (event.key === "q" || event.key === "Q") {
-    setTimeout(() => {
-      event.target.value += "ࡒ";
-    }, 0);
-    event.preventDefault();
-  }
+input.addEventListener("input", () => {
+  // Check for a focused <textarea> element
+  if (input === document.activeElement) {
+    // get current text of the input textarea
+    const start = input.value.substring(0, input.selectionStart).length;
 
-  if (event.key === "w" || event.key === "W") {
-    setTimeout(() => {
-      event.target.value += "ࡅ";
-    }, 0);
-    event.preventDefault();
-  }
+    // set up the cursor position
+    input.setSelectionRange(start, start);
 
-  if (event.key === "e" || event.key === "E") {
-    setTimeout(() => {
-      event.target.value += "ࡏ";
-    }, 0);
-    event.preventDefault();
-  }
+    // if "`" is typed
+    if (input.value.substring(start - 1, start) == "`") {
+      // replace it with "ـ"
+      input.value =
+        input.value.substring(0, start - 1) + "ـ" + input.value.slice(start);
+    }
 
-  if (event.key === "r" || event.key === "R") {
-    setTimeout(() => {
-      event.target.value += "ࡓ";
-    }, 0);
-    event.preventDefault();
-  }
+    // if "q" is typed
+    else if (
+      input.value.substring(start - 1, start) == "q" ||
+      input.value.substring(start - 1, start) == "Q"
+    ) {
+      // replace it with "ࡒ"
+      input.value =
+        input.value.substring(0, start - 1) + "ࡒ" + input.value.slice(start);
+    }
 
-  if (event.key === "t" || event.key === "T") {
-    setTimeout(() => {
-      event.target.value += "ࡕ";
-    }, 0);
-    event.preventDefault();
-  }
+    // if "w" is typed
+    else if (
+      input.value.substring(start - 1, start) == "w" ||
+      input.value.substring(start - 1, start) == "W"
+    ) {
+      // replace it with "ࡅ"
+      input.value =
+        input.value.substring(0, start - 1) + "ࡅ" + input.value.slice(start);
+    }
 
-  if (event.key === "y" || event.key === "Y") {
-    setTimeout(() => {
-      event.target.value += "ࡈ";
-    }, 0);
-    event.preventDefault();
-  }
+    // if "e" is typed
+    else if (
+      input.value.substring(start - 1, start) == "e" ||
+      input.value.substring(start - 1, start) == "E"
+    ) {
+      // replace it with "ࡏ"
+      input.value =
+        input.value.substring(0, start - 1) + "ࡏ" + input.value.slice(start);
+    }
 
-  if (event.key === "u" || event.key === "U") {
-    setTimeout(() => {
-      event.target.value += "ࡗ";
-    }, 0);
-    event.preventDefault();
-  }
+    // if "r" is typed
+    else if (
+      input.value.substring(start - 1, start) == "r" ||
+      input.value.substring(start - 1, start) == "R"
+    ) {
+      // replace it with "ࡓ"
+      input.value =
+        input.value.substring(0, start - 1) + "ࡓ" + input.value.slice(start);
+    }
 
-  if (event.key === "i" || event.key === "I") {
-    setTimeout(() => {
-      event.target.value += "ࡉ";
-    }, 0);
-    event.preventDefault();
-  }
+    // the rest is similar...
+    else if (
+      input.value.substring(start - 1, start) == "t" ||
+      input.value.substring(start - 1, start) == "T"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡕ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "y" ||
+      input.value.substring(start - 1, start) == "Y"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡈ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "u" ||
+      input.value.substring(start - 1, start) == "U"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡗ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "i" ||
+      input.value.substring(start - 1, start) == "I"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡉ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "o" ||
+      input.value.substring(start - 1, start) == "O"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡇ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "p" ||
+      input.value.substring(start - 1, start) == "P"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "࡚" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "a" ||
+      input.value.substring(start - 1, start) == "A"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡀ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "s" ||
+      input.value.substring(start - 1, start) == "S"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡎ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "d" ||
+      input.value.substring(start - 1, start) == "D"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡃ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "f" ||
+      input.value.substring(start - 1, start) == "F"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡐ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "g" ||
+      input.value.substring(start - 1, start) == "G"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡂ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "h" ||
+      input.value.substring(start - 1, start) == "H"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡄ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "j" ||
+      input.value.substring(start - 1, start) == "J"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡖ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "k" ||
+      input.value.substring(start - 1, start) == "K"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡊ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "l" ||
+      input.value.substring(start - 1, start) == "L"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡋ" + input.value.slice(start);
+    } else if (input.value.substring(start - 1, start) == ";") {
+      input.value =
+        input.value.substring(0, start - 1) + "࡙" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "z" ||
+      input.value.substring(start - 1, start) == "Z"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡆ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "x" ||
+      input.value.substring(start - 1, start) == "X"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡔ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "c" ||
+      input.value.substring(start - 1, start) == "C"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡑ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "v" ||
+      input.value.substring(start - 1, start) == "V"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡘ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "b" ||
+      input.value.substring(start - 1, start) == "B"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡁ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "n" ||
+      input.value.substring(start - 1, start) == "N"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡍ" + input.value.slice(start);
+    } else if (
+      input.value.substring(start - 1, start) == "m" ||
+      input.value.substring(start - 1, start) == "M"
+    ) {
+      input.value =
+        input.value.substring(0, start - 1) + "ࡌ" + input.value.slice(start);
+    } else if (input.value.substring(start - 1, start) == ",") {
+      input.value =
+        input.value.substring(0, start - 1) + "࡛" + input.value.slice(start);
+    } else if (input.value.substring(start - 1, start) == ".") {
+      input.value =
+        input.value.substring(0, start - 1) + "࡞" + input.value.slice(start);
+    } else if (input.value.substring(start - 1, start) == "?") {
+      input.value =
+        input.value.substring(0, start - 1) + "؟" + input.value.slice(start);
+    }
 
-  if (event.key === "o" || event.key === "O") {
-    setTimeout(() => {
-      event.target.value += "ࡇ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "p" || event.key === "P") {
-    setTimeout(() => {
-      event.target.value += "࡚";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "a" || event.key === "A") {
-    setTimeout(() => {
-      event.target.value += "ࡀ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "s" || event.key === "S") {
-    setTimeout(() => {
-      event.target.value += "ࡎ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "d" || event.key === "D") {
-    setTimeout(() => {
-      event.target.value += "ࡃ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "f" || event.key === "F") {
-    setTimeout(() => {
-      event.target.value += "ࡐ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "g" || event.key === "G") {
-    setTimeout(() => {
-      event.target.value += "ࡂ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "h" || event.key === "H") {
-    setTimeout(() => {
-      event.target.value += "ࡄ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "j" || event.key === "J") {
-    setTimeout(() => {
-      event.target.value += "ࡖ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "k" || event.key === "K") {
-    setTimeout(() => {
-      event.target.value += "ࡊ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "l" || event.key === "L") {
-    setTimeout(() => {
-      event.target.value += "ࡋ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === ";") {
-    setTimeout(() => {
-      event.target.value += "࡙";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "z" || event.key === "Z") {
-    setTimeout(() => {
-      event.target.value += "ࡆ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "x" || event.key === "X") {
-    setTimeout(() => {
-      event.target.value += "ࡔ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "c" || event.key === "C") {
-    setTimeout(() => {
-      event.target.value += "ࡑ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "v" || event.key === "V") {
-    setTimeout(() => {
-      event.target.value += "ࡘ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "b" || event.key === "B") {
-    setTimeout(() => {
-      event.target.value += "ࡁ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "n" || event.key === "N") {
-    setTimeout(() => {
-      event.target.value += "ࡍ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === "m" || event.key === "M") {
-    setTimeout(() => {
-      event.target.value += "ࡌ";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === ",") {
-    setTimeout(() => {
-      event.target.value += "࡛";
-    }, 0);
-    event.preventDefault();
-  }
-
-  if (event.key === ".") {
-    setTimeout(() => {
-      event.target.value += "࡞";
-    }, 0);
-    event.preventDefault();
+    // update the cursor position
+    input.setSelectionRange(start, start);
   }
 });
