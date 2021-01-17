@@ -35,7 +35,7 @@ input.addEventListener("input", () => {
     ) {
       // replace it with "ࡅ"
       input.value =
-        input.value.substring(0, start - 1) + "ࡅ" + input.value.slice(start);
+        input.value.substring(0, start - 1) + "ࡔ" + input.value.slice(start);
     }
 
     // if "e" is typed
@@ -81,7 +81,7 @@ input.addEventListener("input", () => {
       input.value.substring(start - 1, start) == "و"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡗ" + input.value.slice(start);
+        input.value.substring(0, start - 1) + "ࡅ" + input.value.slice(start);
     } else if (
       input.value.substring(start - 1, start) == "i" ||
       input.value.substring(start - 1, start) == "I" ||
@@ -185,7 +185,7 @@ input.addEventListener("input", () => {
       input.value.substring(start - 1, start) == "خ"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡔ" + input.value.slice(start);
+        input.value.substring(0, start - 1) + "ࡗ" + input.value.slice(start);
     } else if (
       input.value.substring(start - 1, start) == "c" ||
       input.value.substring(start - 1, start) == "C" ||
