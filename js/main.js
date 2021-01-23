@@ -1,10 +1,10 @@
 const input = document.querySelector("textarea");
 
-input.addEventListener("input", () => {
+input.addEventListener("input", (start) => {
   // Check for a focused <textarea> element
   if (input === document.activeElement) {
     // get current text of the input textarea
-    const start = input.value.substring(0, input.selectionStart).length;
+    start = input.value.substring(0, input.selectionStart).length;
 
     // set up the cursor position
     input.setSelectionRange(start, start);
