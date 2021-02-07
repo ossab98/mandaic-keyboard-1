@@ -12,6 +12,8 @@
   src: url("../font/arabic/notosansarabic-regular-webfont.woff2")
       format("woff2"),
     url("../font/arabic/notosansarabic-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,
@@ -43,10 +45,6 @@ h1 {
   border-radius: 10px;
   border-bottom: 3px solid #777;
   transform: scale(0.7);
-}
-
-span:lang(mid) {
-  font-family: "Noto Sans Mandaic", sans-serif;
 }
 
 textarea {
@@ -88,12 +86,15 @@ textarea::placeholder {
   opacity: 0.4;
 }
 
-span {
+span:lang(mid),
+span:lang(ar) {
+  position: static;
+  font-family: "Noto Sans Mandaic", sans-serif;
   font-size: 2rem;
   color: hsl(333, 100%, 33%);
 }
 
-span:lang(en) {
+span {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
