@@ -60,9 +60,12 @@ textarea {
   font-family: "Noto Sans Mandaic", "Noto Sans Arabic", sans-serif;
 }
 
-button {
+kbd {
+  display: grid;
+  align-items: center;
   position: relative;
   grid-column: span 2;
+  font-family: Arial, sans-serif;
   font-size: 1.25rem;
   border-style: solid;
   border-width: 1px 2px 4px 2px;
@@ -70,15 +73,12 @@ button {
   background-color: #f3f3f3;
   border-color: #999 #777 #666 #777;
   color: #222;
+  text-align: center;
 }
 
-button:active {
+kbd:active {
   transform: translateY(2px) scale(0.98);
   border-bottom-width: 2px;
-}
-
-button:focus {
-  outline: none;
 }
 
 textarea::placeholder {
