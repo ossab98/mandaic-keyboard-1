@@ -7,10 +7,6 @@ input.addEventListener("keydown", (event) => {
   if (key) {
     key.classList.add("active");
   }
-  // Remove typing animation when a meta key is entered
-  if (event.metaKey) {
-    key.classList.remove("active");
-  }
 });
 
 // Remove typing animation when a key is released
