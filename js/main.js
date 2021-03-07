@@ -1,5 +1,27 @@
 const input = document.querySelector("textarea");
 
+// Add typing animation when a key is entered
+input.addEventListener("keydown", (event) => {
+  const key = document.querySelector(`kbd[data-code="${event.code}"]`);
+  // Check for key existence to avoid getting a null error
+  if (key) {
+    key.classList.add("active");
+  }
+  // Remove typing animation when a meta key is entered
+  if (event.metaKey) {
+    key.classList.remove("active");
+  }
+});
+
+// Remove typing animation when a key is released
+input.addEventListener("keyup", (event) => {
+  const key = document.querySelector(`kbd[data-code="${event.code}"]`);
+  if (key) {
+    key.classList.remove("active");
+  }
+});
+
+// Change keys from Latin and Arabic to Mandaic on input
 input.addEventListener("input", (start) => {
   // Check for a focused <textarea> element
   if (input === document.activeElement) {
