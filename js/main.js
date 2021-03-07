@@ -7,253 +7,258 @@ input.addEventListener("keydown", (event) => {
   if (key) {
     key.classList.add("active");
   }
+
+  if (key && event.metaKey) {
+    key.classList.remove("active");
+  }
 });
 
 // Remove typing animation when a key is released
 input.addEventListener("keyup", (event) => {
   const key = document.querySelector(`kbd[data-code="${event.code}"]`);
+
   if (key) {
     key.classList.remove("active");
   }
 });
 
 // Change keys from Latin and Arabic to Mandaic on input
-input.addEventListener("input", (start) => {
+input.addEventListener("input", (event) => {
   // Check for a focused <textarea> element
   if (input === document.activeElement) {
     // get current text of the input textarea
-    start = input.value.substring(0, input.selectionStart).length;
+    event = input.value.substring(0, input.selectionStart).length;
 
     // set up the cursor position
-    input.setSelectionRange(start, start);
+    input.setSelectionRange(event, event);
 
     // if "`" is typed
-    if (input.value.substring(start - 1, start) == "`") {
+    if (input.value.substring(event - 1, event) === "`") {
       // replace it with "ـ"
       input.value =
-        input.value.substring(0, start - 1) + "ـ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ـ" + input.value.slice(event);
     }
 
     // if "q" is typed
     else if (
-      input.value.substring(start - 1, start) == "q" ||
-      input.value.substring(start - 1, start) == "Q" ||
-      input.value.substring(start - 1, start) == "ق"
+      input.value.substring(event - 1, event) === "q" ||
+      input.value.substring(event - 1, event) === "Q" ||
+      input.value.substring(event - 1, event) === "ق"
     ) {
       // replace it with "ࡒ"
       input.value =
-        input.value.substring(0, start - 1) + "ࡒ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡒ" + input.value.slice(event);
     }
 
     // if "w" is typed
     else if (
-      input.value.substring(start - 1, start) == "w" ||
-      input.value.substring(start - 1, start) == "W" ||
-      input.value.substring(start - 1, start) == "ش"
+      input.value.substring(event - 1, event) === "w" ||
+      input.value.substring(event - 1, event) === "W" ||
+      input.value.substring(event - 1, event) === "ش"
     ) {
       // replace it with "ࡅ"
       input.value =
-        input.value.substring(0, start - 1) + "ࡔ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡔ" + input.value.slice(event);
     }
 
     // if "e" is typed
     else if (
-      input.value.substring(start - 1, start) == "e" ||
-      input.value.substring(start - 1, start) == "E" ||
-      input.value.substring(start - 1, start) == "ع"
+      input.value.substring(event - 1, event) === "e" ||
+      input.value.substring(event - 1, event) === "E" ||
+      input.value.substring(event - 1, event) === "ع"
     ) {
       // replace it with "ࡏ"
       input.value =
-        input.value.substring(0, start - 1) + "ࡏ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡏ" + input.value.slice(event);
     }
 
     // if "r" is typed
     else if (
-      input.value.substring(start - 1, start) == "r" ||
-      input.value.substring(start - 1, start) == "R" ||
-      input.value.substring(start - 1, start) == "ر"
+      input.value.substring(event - 1, event) === "r" ||
+      input.value.substring(event - 1, event) === "R" ||
+      input.value.substring(event - 1, event) === "ر"
     ) {
       // replace it with "ࡓ"
       input.value =
-        input.value.substring(0, start - 1) + "ࡓ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡓ" + input.value.slice(event);
     }
 
     // the rest is similar...
     else if (
-      input.value.substring(start - 1, start) == "t" ||
-      input.value.substring(start - 1, start) == "T" ||
-      input.value.substring(start - 1, start) == "ت"
+      input.value.substring(event - 1, event) === "t" ||
+      input.value.substring(event - 1, event) === "T" ||
+      input.value.substring(event - 1, event) === "ت"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡕ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡕ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "y" ||
-      input.value.substring(start - 1, start) == "Y" ||
-      input.value.substring(start - 1, start) == "ط"
+      input.value.substring(event - 1, event) === "y" ||
+      input.value.substring(event - 1, event) === "Y" ||
+      input.value.substring(event - 1, event) === "ط"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡈ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡈ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "u" ||
-      input.value.substring(start - 1, start) == "U" ||
-      input.value.substring(start - 1, start) == "و"
+      input.value.substring(event - 1, event) === "u" ||
+      input.value.substring(event - 1, event) === "U" ||
+      input.value.substring(event - 1, event) === "و"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡅ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡅ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "i" ||
-      input.value.substring(start - 1, start) == "I" ||
-      input.value.substring(start - 1, start) == "ي"
+      input.value.substring(event - 1, event) === "i" ||
+      input.value.substring(event - 1, event) === "I" ||
+      input.value.substring(event - 1, event) === "ي"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡉ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡉ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "o" ||
-      input.value.substring(start - 1, start) == "O" ||
-      input.value.substring(start - 1, start) == "ه"
+      input.value.substring(event - 1, event) === "o" ||
+      input.value.substring(event - 1, event) === "O" ||
+      input.value.substring(event - 1, event) === "ه"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡇ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡇ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "p" ||
-      input.value.substring(start - 1, start) == "P" ||
-      input.value.substring(start - 1, start) == "ة"
+      input.value.substring(event - 1, event) === "p" ||
+      input.value.substring(event - 1, event) === "P" ||
+      input.value.substring(event - 1, event) === "ة"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "࡚" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "࡚" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "a" ||
-      input.value.substring(start - 1, start) == "A" ||
-      input.value.substring(start - 1, start) == "ا"
+      input.value.substring(event - 1, event) === "a" ||
+      input.value.substring(event - 1, event) === "A" ||
+      input.value.substring(event - 1, event) === "ا"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡀ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡀ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "s" ||
-      input.value.substring(start - 1, start) == "S" ||
-      input.value.substring(start - 1, start) == "س"
+      input.value.substring(event - 1, event) === "s" ||
+      input.value.substring(event - 1, event) === "S" ||
+      input.value.substring(event - 1, event) === "س"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡎ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡎ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "d" ||
-      input.value.substring(start - 1, start) == "D" ||
-      input.value.substring(start - 1, start) == "د"
+      input.value.substring(event - 1, event) === "d" ||
+      input.value.substring(event - 1, event) === "D" ||
+      input.value.substring(event - 1, event) === "د"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡃ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡃ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "f" ||
-      input.value.substring(start - 1, start) == "F" ||
-      input.value.substring(start - 1, start) == "ف"
+      input.value.substring(event - 1, event) === "f" ||
+      input.value.substring(event - 1, event) === "F" ||
+      input.value.substring(event - 1, event) === "ف"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡐ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡐ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "g" ||
-      input.value.substring(start - 1, start) == "G" ||
-      input.value.substring(start - 1, start) == "غ"
+      input.value.substring(event - 1, event) === "g" ||
+      input.value.substring(event - 1, event) === "G" ||
+      input.value.substring(event - 1, event) === "غ"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡂ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡂ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "h" ||
-      input.value.substring(start - 1, start) == "H" ||
-      input.value.substring(start - 1, start) == "ح"
+      input.value.substring(event - 1, event) === "h" ||
+      input.value.substring(event - 1, event) === "H" ||
+      input.value.substring(event - 1, event) === "ح"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡄ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡄ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "j" ||
-      input.value.substring(start - 1, start) == "J" ||
-      input.value.substring(start - 1, start) == "ج"
+      input.value.substring(event - 1, event) === "j" ||
+      input.value.substring(event - 1, event) === "J" ||
+      input.value.substring(event - 1, event) === "ج"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡖ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡖ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "k" ||
-      input.value.substring(start - 1, start) == "K" ||
-      input.value.substring(start - 1, start) == "ك"
+      input.value.substring(event - 1, event) === "k" ||
+      input.value.substring(event - 1, event) === "K" ||
+      input.value.substring(event - 1, event) === "ك"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡊ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡊ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "l" ||
-      input.value.substring(start - 1, start) == "L" ||
-      input.value.substring(start - 1, start) == "ل"
+      input.value.substring(event - 1, event) === "l" ||
+      input.value.substring(event - 1, event) === "L" ||
+      input.value.substring(event - 1, event) === "ل"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡋ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡋ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == ";" ||
-      input.value.substring(start - 1, start) == "؛"
+      input.value.substring(event - 1, event) === ";" ||
+      input.value.substring(event - 1, event) === "؛"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "࡙" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "࡙" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "z" ||
-      input.value.substring(start - 1, start) == "Z" ||
-      input.value.substring(start - 1, start) == "ز"
+      input.value.substring(event - 1, event) === "z" ||
+      input.value.substring(event - 1, event) === "Z" ||
+      input.value.substring(event - 1, event) === "ز"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡆ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡆ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "x" ||
-      input.value.substring(start - 1, start) == "X" ||
-      input.value.substring(start - 1, start) == "خ"
+      input.value.substring(event - 1, event) === "x" ||
+      input.value.substring(event - 1, event) === "X" ||
+      input.value.substring(event - 1, event) === "خ"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡗ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡗ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "c" ||
-      input.value.substring(start - 1, start) == "C" ||
-      input.value.substring(start - 1, start) == "ص"
+      input.value.substring(event - 1, event) === "c" ||
+      input.value.substring(event - 1, event) === "C" ||
+      input.value.substring(event - 1, event) === "ص"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡑ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡑ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "v" ||
-      input.value.substring(start - 1, start) == "V" ||
-      input.value.substring(start - 1, start) == "ذ"
+      input.value.substring(event - 1, event) === "v" ||
+      input.value.substring(event - 1, event) === "V" ||
+      input.value.substring(event - 1, event) === "ذ"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡘ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡘ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "b" ||
-      input.value.substring(start - 1, start) == "B" ||
-      input.value.substring(start - 1, start) == "ب"
+      input.value.substring(event - 1, event) === "b" ||
+      input.value.substring(event - 1, event) === "B" ||
+      input.value.substring(event - 1, event) === "ب"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡁ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡁ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "n" ||
-      input.value.substring(start - 1, start) == "N" ||
-      input.value.substring(start - 1, start) == "ن"
+      input.value.substring(event - 1, event) === "n" ||
+      input.value.substring(event - 1, event) === "N" ||
+      input.value.substring(event - 1, event) === "ن"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡍ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡍ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "m" ||
-      input.value.substring(start - 1, start) == "M" ||
-      input.value.substring(start - 1, start) == "م"
+      input.value.substring(event - 1, event) === "m" ||
+      input.value.substring(event - 1, event) === "M" ||
+      input.value.substring(event - 1, event) === "م"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "ࡌ" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "ࡌ" + input.value.slice(event);
     } else if (
-      input.value.substring(start - 1, start) == "," ||
-      input.value.substring(start - 1, start) == "،"
+      input.value.substring(event - 1, event) === "," ||
+      input.value.substring(event - 1, event) === "،"
     ) {
       input.value =
-        input.value.substring(0, start - 1) + "࡛" + input.value.slice(start);
-    } else if (input.value.substring(start - 1, start) == ".") {
+        input.value.substring(0, event - 1) + "࡛" + input.value.slice(event);
+    } else if (input.value.substring(event - 1, event) === ".") {
       input.value =
-        input.value.substring(0, start - 1) + "࡞" + input.value.slice(start);
-    } else if (input.value.substring(start - 1, start) == "?") {
+        input.value.substring(0, event - 1) + "࡞" + input.value.slice(event);
+    } else if (input.value.substring(event - 1, event) === "?") {
       input.value =
-        input.value.substring(0, start - 1) + "؟" + input.value.slice(start);
+        input.value.substring(0, event - 1) + "؟" + input.value.slice(event);
     }
 
     // update the cursor position
-    input.setSelectionRange(start, start);
+    input.setSelectionRange(event, event);
   }
 });
