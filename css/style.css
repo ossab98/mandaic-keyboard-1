@@ -30,34 +30,38 @@ body {
 }
 
 h1 {
-  margin-top: 3rem;
+  margin: 3rem 0;
   text-align: center;
   text-transform: capitalize;
 }
 
-.base {
+.base,
+textarea {
   display: grid;
   grid-template-columns: repeat(15, 30px auto);
   grid-template-rows: repeat(4, 60px);
   grid-gap: 5px;
+  width: 50%;
   padding: 20px;
+  margin: 0 auto;
+}
+
+.base {
   background-color: #c5c5c5;
   border-radius: 10px;
   border-bottom: 3px solid #777;
-  transform: scale(0.7);
 }
 
 textarea {
-  width: 100vw;
   height: 254px;
-  transform: scale(0.7);
   resize: vertical;
   padding: 1rem;
   border: 2px solid #c5c5c5;
   border-radius: 10px;
   background-color: transparent;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-family: "Noto Sans Mandaic", "Noto Sans Arabic", sans-serif;
+  margin-bottom: 3rem;
 }
 
 kbd {
@@ -66,7 +70,7 @@ kbd {
   position: relative;
   grid-column: span 2;
   font-family: Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   border-style: solid;
   border-width: 1px 2px 4px 2px;
   border-radius: 5px;
@@ -87,22 +91,6 @@ textarea::placeholder {
   opacity: 0.4;
 }
 
-span:lang(mid),
-span:lang(ar) {
-  position: static;
-  font-family: "Noto Sans Mandaic", sans-serif;
-  font-size: 2rem;
-  color: hsl(333, 100%, 33%);
-}
-
-span {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  font-size: 1rem;
-  color: inherit;
-}
-
 .leftshift,
 .rightshift {
   grid-column: span 5;
@@ -117,4 +105,8 @@ span {
 .tab,
 .backslash {
   grid-column: span 3;
+}
+
+.mandaic {
+  font-size: 1.25rem;
 }
