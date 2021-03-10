@@ -109,5 +109,6 @@ textarea::placeholder {
 }
 
 .mandaic {
+  font-family: "Noto Sans Mandaic";
   font-size: 1.25rem;
 }
