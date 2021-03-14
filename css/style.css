@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  margin: 3rem 0;
+  margin: 2rem 0;
   text-align: center;
   text-transform: capitalize;
 }
@@ -41,13 +41,13 @@ textarea {
   grid-template-columns: repeat(15, 30px auto);
   grid-template-rows: repeat(4, 60px);
   grid-gap: 5px;
-  width: 50%;
+  width: calc(100% / 3 * 2);
   padding: 20px;
   margin: 0 auto;
 }
 
 .base {
-  background-color: #c5c5c5;
+  background-color: #ccc;
   border-radius: 10px;
   border-bottom: 3px solid #777;
 }
@@ -57,12 +57,12 @@ textarea {
   line-height: 1.5;
   resize: vertical;
   padding: 1rem;
-  border: 2px solid #c5c5c5;
+  border: 2px solid #ccc;
   border-radius: 10px;
   background-color: transparent;
   font-size: 1.75rem;
   font-family: "Noto Sans Mandaic", "Noto Sans Arabic", sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 kbd {
@@ -85,6 +85,7 @@ kbd:active,
 kbd.active {
   transform: translateY(2px) scale(0.98);
   border-bottom-width: 2px;
+  background-color: #eaeaea;
 }
 
 textarea::placeholder {
@@ -111,4 +112,11 @@ textarea::placeholder {
 .mandaic {
   font-family: "Noto Sans Mandaic";
   font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1600px) {
+  .base,
+  textarea {
+    width: 50%;
+  }
 }
