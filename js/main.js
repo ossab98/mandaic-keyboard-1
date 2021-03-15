@@ -66,7 +66,8 @@ input.addEventListener("input", (event) => {
     else if (
       input.value.substring(event - 1, event) === "e" ||
       input.value.substring(event - 1, event) === "E" ||
-      input.value.substring(event - 1, event) === "ع"
+      input.value.substring(event - 1, event) === "ع" ||
+      input.value.substring(event - 1, event) === "ء"
     ) {
       // replace it with "ࡏ"
       input.value =
@@ -118,7 +119,8 @@ input.addEventListener("input", (event) => {
     } else if (
       input.value.substring(event - 1, event) === "o" ||
       input.value.substring(event - 1, event) === "O" ||
-      input.value.substring(event - 1, event) === "ه"
+      input.value.substring(event - 1, event) === "ه" ||
+      input.value.substring(event - 1, event) === "ہ"
     ) {
       input.value =
         input.value.substring(0, event - 1) + "ࡇ" + input.value.slice(event);
@@ -134,7 +136,8 @@ input.addEventListener("input", (event) => {
       input.value.substring(event - 1, event) === "A" ||
       input.value.substring(event - 1, event) === "ا" ||
       input.value.substring(event - 1, event) === "آ" ||
-      input.value.substring(event - 1, event) === "ی"
+      input.value.substring(event - 1, event) === "ی" ||
+      input.value.substring(event - 1, event) === "ئ"
     ) {
       input.value =
         input.value.substring(0, event - 1) + "ࡀ" + input.value.slice(event);
@@ -186,6 +189,7 @@ input.addEventListener("input", (event) => {
       input.value.substring(event - 1, event) === "k" ||
       input.value.substring(event - 1, event) === "K" ||
       input.value.substring(event - 1, event) === "ك" ||
+      input.value.substring(event - 1, event) === "ک" ||
       input.value.substring(event - 1, event) === "گ"
     ) {
       input.value =
