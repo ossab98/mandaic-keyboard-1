@@ -66,10 +66,6 @@ input.addEventListener("input", (event) => {
     else if (
       input.value.substring(event - 1, event) === "e" ||
       input.value.substring(event - 1, event) === "E" ||
-      input.value.substring(event - 1, event) === "æ" ||
-      input.value.substring(event - 1, event) === "Æ" ||
-      input.value.substring(event - 1, event) === "ö" ||
-      input.value.substring(event - 1, event) === "Ö" ||
       input.value.substring(event - 1, event) === "ء"
     ) {
       // replace it with "ࡏ"
@@ -92,7 +88,6 @@ input.addEventListener("input", (event) => {
     else if (
       input.value.substring(event - 1, event) === "t" ||
       input.value.substring(event - 1, event) === "T" ||
-      input.value.substring(event - 1, event) === "ß" ||
       input.value.substring(event - 1, event) === "ت" ||
       input.value.substring(event - 1, event) === "ة" ||
       input.value.substring(event - 1, event) === "ث"
@@ -110,8 +105,6 @@ input.addEventListener("input", (event) => {
     } else if (
       input.value.substring(event - 1, event) === "u" ||
       input.value.substring(event - 1, event) === "U" ||
-      input.value.substring(event - 1, event) === "ü" ||
-      input.value.substring(event - 1, event) === "Ü" ||
       input.value.substring(event - 1, event) === "و" ||
       input.value.substring(event - 1, event) === "ؤ"
     ) {
@@ -142,9 +135,6 @@ input.addEventListener("input", (event) => {
     } else if (
       input.value.substring(event - 1, event) === "a" ||
       input.value.substring(event - 1, event) === "A" ||
-      input.value.substring(event - 1, event) === "å" ||
-      input.value.substring(event - 1, event) === "ä" ||
-      input.value.substring(event - 1, event) === "Ä" ||
       input.value.substring(event - 1, event) === "ا" ||
       input.value.substring(event - 1, event) === "آ" ||
       input.value.substring(event - 1, event) === "ی" ||
@@ -193,9 +183,7 @@ input.addEventListener("input", (event) => {
         input.value.substring(0, event - 1) + "ࡄ" + input.value.slice(event);
     } else if (
       input.value.substring(event - 1, event) === "j" ||
-      input.value.substring(event - 1, event) === "J" ||
-      input.value.substring(event - 1, event) === "ø" ||
-      input.value.substring(event - 1, event) === "Ø"
+      input.value.substring(event - 1, event) === "J"
     ) {
       input.value =
         input.value.substring(0, event - 1) + "ࡖ" + input.value.slice(event);

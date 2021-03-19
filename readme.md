@@ -14,5 +14,3 @@
 - [x] Add typing animation to further improve the user experience.
 - [x] Add missing characters such as ? from the Arabic Noto Sans family.
 - [x] Add missing letters from Arabic and Persian languages.
-- [x] Add missing letters from Danish, German, Norwegian, and Swedish.
-- [] Add missing letters from French, Spanish, and Italian.
