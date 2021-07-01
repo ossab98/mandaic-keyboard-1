@@ -114,9 +114,21 @@ textarea::placeholder {
   font-size: 1.25rem;
 }
 
+/* Reduce keyboard size on large monitors */
 @media screen and (min-width: 1600px) {
   .base,
   textarea {
-    width: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Hide keyboard on mobile devices: virtual keyboard will work */
+@media screen and (max-width: 952px) {
+  .base {
+    display: none;
+  }
+
+  textarea {
+    width: 90%;
   }
 }
