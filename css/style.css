@@ -83,9 +83,11 @@ kbd {
 
 kbd:active,
 kbd.active {
-  transform: translateY(2px) scale(0.98);
+  transform: scale(0.98);
   border-bottom-width: 2px;
-  background-color: #eaeaea;
+  border-color: #222;
+  background-color: #222;
+  color: #fafafa;
 }
 
 textarea::placeholder {
