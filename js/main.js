@@ -3,12 +3,15 @@ const input = document.querySelector("textarea");
 // Add typing animation when a key is entered
 input.addEventListener("keydown", (event) => {
   const key = document.querySelector(`kbd[data-code="${event.code}"]`);
-  // Check for key existence to avoid getting a null error
-  if (key) {
+
+  // Avoid getting a "null" error in your console
+  if (!key) {
+    return;
+  } else {
     key.classList.add("active");
   }
 
-  if (key && event.metaKey) {
+  if (event.metaKey) {
     key.classList.remove("active");
   }
 });
