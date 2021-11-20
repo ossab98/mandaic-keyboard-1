@@ -13,3 +13,5 @@
 - [x] Fix bug for the keyboard to work with input event.
 - [x] Add typing animation to further improve the user experience.
 - [x] Add missing characters such as ? from the Arabic Noto Sans family.
+- [] Modify the Mandaic font to add support for numbers and symbols.
+- [] English-Mandaic dictionary
