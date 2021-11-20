@@ -164,6 +164,11 @@ textarea::placeholder {
 
 /* Hide keyboard on mobile devices: virtual keyboard will work */
 @media screen and (max-width: 952px) {
+  article p,
+  article li {
+    font-size: 1rem;
+  }
+
   .base {
     display: none;
   }
