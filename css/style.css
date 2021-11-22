@@ -39,6 +39,10 @@ nav a {
   text-transform: capitalize;
 }
 
+div ul {
+  margin-bottom: 2rem;
+}
+
 article {
   max-width: 80ch;
   margin: auto;
@@ -57,7 +61,7 @@ article li {
 }
 
 article li {
-  list-style-position: inside;
+  margin-left: 1.25rem;
 }
 
 section {
