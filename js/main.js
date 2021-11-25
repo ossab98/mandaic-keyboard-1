@@ -39,7 +39,7 @@ input.addEventListener("input", (event) => {
     if (input.value.substring(event - 1, event) === "`") {
       // change to "ـ"
       input.value =
-        input.value.substring(0, event - 1) + `ـ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ـ${input.value.slice(event)}`;
     }
 
     // if "q"
@@ -49,7 +49,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡒ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡒ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡒ${input.value.slice(event)}`;
     }
 
     // if "w"
@@ -59,7 +59,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡅ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡔ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡔ${input.value.slice(event)}`;
     }
 
     // if "e"
@@ -69,7 +69,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡏ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡏ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡏ${input.value.slice(event)}`;
     }
 
     // if "r"
@@ -79,7 +79,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡓ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡓ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡓ${input.value.slice(event)}`;
     }
 
     // if "t"
@@ -89,7 +89,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡕ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡕ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡕ${input.value.slice(event)}`;
     }
 
     // if "y"
@@ -99,7 +99,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡈ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡈ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡈ${input.value.slice(event)}`;
     }
 
     // if "u"
@@ -109,7 +109,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡅ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡅ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡅ${input.value.slice(event)}`;
     }
 
     // if "i"
@@ -119,7 +119,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡉ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡉ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡉ${input.value.slice(event)}`;
     }
 
     // if "o"
@@ -129,7 +129,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡇ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡇ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡇ${input.value.slice(event)}`;
     }
 
     // if "p"
@@ -139,7 +139,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "࡚"
       input.value =
-        input.value.substring(0, event - 1) + `࡚ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `࡚${input.value.slice(event)}`;
     }
 
     // if "a"
@@ -149,7 +149,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡀ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡀ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡀ${input.value.slice(event)}`;
     }
 
     // if "s"
@@ -159,7 +159,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡎ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡎ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡎ${input.value.slice(event)}`;
     }
 
     // if "d"
@@ -169,7 +169,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡃ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡃ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡃ${input.value.slice(event)}`;
     }
 
     // if "f"
@@ -179,7 +179,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡐ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡐ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡐ${input.value.slice(event)}`;
     }
 
     // if "g"
@@ -189,7 +189,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡂ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡂ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡂ${input.value.slice(event)}`;
     }
 
     // if "h"
@@ -199,7 +199,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡄ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡄ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡄ${input.value.slice(event)}`;
     }
 
     // if "j"
@@ -209,7 +209,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡖ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡖ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡖ${input.value.slice(event)}`;
     }
 
     // if "k"
@@ -219,7 +219,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡊ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡊ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡊ${input.value.slice(event)}`;
     }
 
     // if "l"
@@ -229,14 +229,14 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡋ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡋ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡋ${input.value.slice(event)}`;
     }
 
     // if ";"
     else if (input.value.substring(event - 1, event) === ";") {
       // change to "࡙"
       input.value =
-        input.value.substring(0, event - 1) + `࡙ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `࡙${input.value.slice(event)}`;
     }
 
     // if "z"
@@ -246,7 +246,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡆ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡆ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡆ${input.value.slice(event)}`;
     }
 
     // if "x"
@@ -256,7 +256,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡗ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡗ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡗ${input.value.slice(event)}`;
     }
 
     // if "c"
@@ -266,7 +266,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡑ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡑ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡑ${input.value.slice(event)}`;
     }
 
     // if "v"
@@ -276,7 +276,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡘ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡘ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡘ${input.value.slice(event)}`;
     }
 
     // if "b"
@@ -286,7 +286,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡁ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡁ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡁ${input.value.slice(event)}`;
     }
 
     // if "n"
@@ -296,7 +296,7 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡍ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡍ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡍ${input.value.slice(event)}`;
     }
 
     // if "m"
@@ -306,28 +306,28 @@ input.addEventListener("input", (event) => {
     ) {
       // change to "ࡌ"
       input.value =
-        input.value.substring(0, event - 1) + `ࡌ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `ࡌ${input.value.slice(event)}`;
     }
 
     // if ","
     else if (input.value.substring(event - 1, event) === ",") {
       // change to "࡛"
       input.value =
-        input.value.substring(0, event - 1) + `࡛ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `࡛${input.value.slice(event)}`;
     }
 
     // if "."
     else if (input.value.substring(event - 1, event) === ".") {
       // change to "࡞"
       input.value =
-        input.value.substring(0, event - 1) + `࡞ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `࡞${input.value.slice(event)}`;
     }
 
     // if "?"
     else if (input.value.substring(event - 1, event) === "?") {
       // change to "؟"
       input.value =
-        input.value.substring(0, event - 1) + `؟ ${input.value.slice(event)}`;
+        input.value.substring(0, event - 1) + `؟${input.value.slice(event)}`;
     }
 
     // update the cursor position
